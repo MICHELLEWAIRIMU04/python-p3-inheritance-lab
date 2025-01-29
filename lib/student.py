@@ -11,7 +11,7 @@ class Student(User):
         self.knowledge.append(new_knowledge)
 
     def __str__(self):
-        return f"Student: my {self.first_name} {self.last_name}, knowledge: {', '.join(self.knowledge)}"
+        return f"Student: {self.first_name} {self.last_name}, knowledge: {', '.join(self.knowledge)}"
 
 student = Student("ann", "kinyanjui")
 #print(student)

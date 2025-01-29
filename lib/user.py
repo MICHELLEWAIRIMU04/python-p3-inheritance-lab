@@ -6,6 +6,6 @@ class User:
         self.last_name = last_name
     
     def __str__(self):
-        return f"User: my {self.first_name} {self.last_name}"
+        return f"User: {self.first_name} {self.last_name}"
 
 

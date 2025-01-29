@@ -24,7 +24,7 @@ class Teacher(User):
         return self.knowledge[index]
     
     def __str__(self):
-        return f"Teacher: my {self.first_name} {self.last_name}"
+        return f"Teacher: {self.first_name} {self.last_name}"
 
 teacher = Teacher("Michelle", "Wairimu", knowledge)
 print(teacher)
