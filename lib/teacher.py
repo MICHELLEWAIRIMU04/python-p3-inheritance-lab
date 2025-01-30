@@ -15,9 +15,10 @@ knowledge = [
         "pytest -x flag to fail fast",
     ]
 class Teacher(User):
-    def __init__(self, first_name, last_name, knowledge):
+    def __init__(self, first_name, last_name, knowledge=None):
         super().__init__(first_name, last_name)
-        self.knowledge = knowledge
+        self.knowledge = knowledge if knowledge is not None else []
+        
 
     def teach(self):
         index = random.randint(0, len(self.knowledge) - 1)
