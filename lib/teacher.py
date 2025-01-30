@@ -4,7 +4,7 @@ from user import User
 
 import random
 
-knowledge = [
+KNOWLEDGE = [
         "str is a data type in Python",
         "programming is hard, but it's worth it",
         "JavaScript async web request",
@@ -17,7 +17,7 @@ knowledge = [
 class Teacher(User):
     def __init__(self, first_name, last_name, knowledge=None):
         super().__init__(first_name, last_name)
-        self.knowledge = knowledge if knowledge is not None else []
+        self.knowledge = knowledge if knowledge is not None else KNOWLEDGE.copy()
         
 
     def teach(self):
@@ -27,6 +27,6 @@ class Teacher(User):
     def __str__(self):
         return f"Teacher: {self.first_name} {self.last_name}"
 
-teacher = Teacher("Michelle", "Wairimu", knowledge)
+teacher = Teacher("Michelle", "Wairimu", KNOWLEDGE)
 print(teacher)
 print(teacher.teach())
